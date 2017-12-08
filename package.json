@@ -27,11 +27,11 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
-  "author": "",
+  "author": "Iván Wolf",
   "homepage": "",
   "license": "MIT",
   "repository": "",
   "keywords": [
-    "react-component"
+    "react-high-order-component"
   ]
 }
