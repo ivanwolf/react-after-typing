@@ -1,6 +1,6 @@
 {
   "name": "react-after-typing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-after-typing React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -11,12 +11,13 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component",
+    "build": "nwb build-react-component -- no--demo",
     "clean": "nwb clean-module && nwb clean-demo",
     "start": "nwb serve-react-demo",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "nwb test-react --server",
+    "prepublish": "npm run build"
   },
   "dependencies": {},
   "peerDependencies": {
