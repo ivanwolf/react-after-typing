@@ -1,16 +1,48 @@
 # react-after-typing
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+This HOC add a callback function to an input component. The function is called right after the user stop typing.
 
-Describe react-after-typing here.
+## What it solves
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+Some uses case are instant form validation and applying a filter to a list.
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+## Usage
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+```bash
+$ yarn add react-after-typing
+```
+
+```js
+import afterTyping from 'react-after-typing':
+
+// Define your input
+const Input = props => (
+  <input type="text" {...props} />
+);
+
+// Enhance it
+const InputWithCallback = afterTyping(Input);
+```
+
+```js
+// Add the callback prop
+render() {
+  return (
+    <InputWithCallback afterTyping={() => console.log('Hola')}/>
+  )
+}
+```
+
+***
+
+## < EnhancedInput />
+
+### Props
+
+- **afterTyping: Function**
+
+    The the function to be called.
+
+- **time: Integer**
+
+    Optional. Number of ms waited before firing the function, defaults to 500.

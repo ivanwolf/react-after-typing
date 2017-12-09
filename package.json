@@ -30,7 +30,7 @@
   "author": "Iván Wolf",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/ivanwolf15/react-after-typing",
   "keywords": [
     "react-high-order-component"
   ]
